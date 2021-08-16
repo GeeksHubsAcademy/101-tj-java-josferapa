@@ -1,0 +1,16 @@
+dist: trusty
+language: java
+sudo: false
+
+notifications:
+  email: false
+  slack: geekshubs:rrvY2RwjwpXwVTW3jjcW8JYg
+
+cache:
+  directories:
+       - $HOME/.m2
+env:
+  dist: xenial
+
+script:
+  - mvn test -f ./pom.xml
